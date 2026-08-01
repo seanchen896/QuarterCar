@@ -222,7 +222,7 @@ sortedFile = "task5_speed_bump_normalized_results_sorted.csv";
 
 - Integrated quarter-car Simulink model
 - `quarterCarParameters.m`
-- `scoreSuspension_final.m`
+- `scoreSuspension.m`
 - `task5_setup.m`
 - `task5_overall_results.m`
 
