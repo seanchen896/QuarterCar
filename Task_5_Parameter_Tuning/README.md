@@ -17,6 +17,8 @@ The baseline quarter-car parameters were:
 - `Kt = 180000 N/m`
 - `Ct = 100 N*s/m`
 
+The physical sprung-mass and unsprung-mass blocks in the integrated Simulink model were also updated to use the workspace variables `Ms` and `Mu` rather than geometry-calculated fixed masses.
+
 Only `Ks` and `Cs` were changed during the parameter sweep. The remaining parameters were kept constant.
 
 ## Parameter Sweep
@@ -122,17 +124,17 @@ A score below `2.0000` represents an overall improvement compared with the basel
 
 The best design for the speed-bump case was:
 
-- `Ks = 21000 N/m`
-- `Cs = 1200 N*s/m`
-- Normalized score: `1.9935`
+- `Ks = 18000 N/m`
+- `Cs = 1500 N*s/m`
+- Normalized score: `2.0000`
 
 ### Pothole
 
 The best design for the pothole case was:
 
 - `Ks = 21000 N/m`
-- `Cs = 1200 N*s/m`
-- Normalized score: `1.9499`
+- `Cs = 1800 N*s/m`
+- Normalized score: `1.9650`
 
 ### Rough Road
 
@@ -140,8 +142,8 @@ The best design for the rough-road case was:
 
 - `Ks = 15000 N/m`
 - `Cs = 1200 N*s/m`
-- Normalized score: `1.8083`
-
+- Normalized score: `1.8009`
+  
 ## Overall Score
 
 The normalized scores from the speed-bump, pothole, and rough-road tests were averaged for each suspension design.
@@ -161,18 +163,18 @@ The selected suspension parameters were:
 - `Ks = 21000 N/m`
 - `Cs = 1200 N*s/m`
 
-The selected design produced the following scores:
+The selected design produced the following normalized scores:
 
 | Road Case | Normalized Score |
 |---|---:|
-| Speed bump | 1.9935 |
-| Pothole | 1.9499 |
-| Rough road | 1.8174 |
-| **Overall average** | **1.9203** |
+| Speed bump | 2.0050 |
+| Pothole | 2.0084 |
+| Rough road | 1.8107 |
+| **Overall average** | **1.9414** |
 
 The baseline overall score was `2.0000`.
 
-The selected design therefore produced an overall weighted improvement of approximately `4%`.
+The selected design therefore reduced the average weighted normalized score by approximately `2.9%` compared with the baseline.
 
 ## Design Tradeoffs
 
@@ -199,7 +201,7 @@ Example rough-road settings:
 ```matlab
 roadName = "Rough_Road";
 resultsFile = "task5_rough_road_normalized_results.csv";
-sortedFile = "task5_rough_road_normalized_results_sorted.csv";
+sortedFile = "task5_rough_road_normalized_sorted.csv";
 ```
 
 Example pothole settings:
@@ -207,7 +209,7 @@ Example pothole settings:
 ```matlab
 roadName = "Pothole";
 resultsFile = "task5_pothole_normalized_results.csv";
-sortedFile = "task5_pothole_normalized_results_sorted.csv";
+sortedFile = "task5_pothole_normalized_sorted.csv";
 ```
 
 Example speed-bump settings:
@@ -215,7 +217,7 @@ Example speed-bump settings:
 ```matlab
 roadName = "Speed_Bump";
 resultsFile = "task5_speed_bump_normalized_results.csv";
-sortedFile = "task5_speed_bump_normalized_results_sorted.csv";
+sortedFile = "task5_speed_bump_normalized_sorted.csv";
 ```
 
 ## Required Files
@@ -243,4 +245,6 @@ Ks = 21000 N/m
 Cs = 1200 N*s/m
 ```
 
-This design produced the lowest average normalized score across all three road cases and provided the best overall balance between ride comfort, suspension travel, and tire deflection.
+Using the corrected physical mass parameters, this design produced the lowest average normalized score across all three road cases, with an overall score of `1.9414`.
+
+Although it was not the best design for every individual road case, it provided the best combined balance between ride comfort, suspension travel, and tire deflection.
