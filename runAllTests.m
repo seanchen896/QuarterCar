@@ -14,9 +14,10 @@ end
 
 validateRequirements(requirements);
 
-modelFile = modelName + ".slx";
-if ~isfile(modelFile)
-    error('Model file "%s" was not found in the current folder.', modelFile);
+modelFile = which(modelName + ".slx");
+
+if isempty(modelFile)
+    error('Model file "%s.slx" was not found on the MATLAB path.', modelName);
 end
 
 % Baseline vehicle parameters
