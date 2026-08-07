@@ -1,4 +1,4 @@
-Quarter-Car Suspension Project
+# Quarter-Car Suspension Project
 
 This repository contains the MATLAB and Simulink files for the quarter-car suspension modeling and optimization project.
 
@@ -10,8 +10,8 @@ Project Tasks
 - Task 4: Automated test runner
 - Task 5: Suspension parameter tuning
 - Task 6: Robustness validation
-# Quarter-Car Suspension Project
 
+## Overview 
 This project uses MATLAB, Simulink, and Simscape Multibody to model and test a quarter-car suspension system.
 
 We tested the suspension using three road inputs:
