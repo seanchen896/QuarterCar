@@ -37,10 +37,13 @@ For the robustness test, the sprung mass was increased by 25% from 300 kg to 375
 
 1. Download or clone the repository.
 2. Open the project folder in MATLAB.
-3. Open `QuarterCar_Final_Report.mlx` for the full project report.
-4. Run `runAllTests.m` for the automated road tests.
-5. Run the Task 5 scripts for the parameter sweep and tuning results.
-6. Run `task6.m` for the robustness test.
+3. Run `addpath(genpath(pwd))` in the MATLAB Command Window.
+4. Open `QuarterCar_Final_Report.mlx` for the full project report.
+5. Run `runAllTests` for the automated road tests.
+6. To reproduce the Task 5 tuning results:
+   - Run `task5_setup` first to perform the parameter sweep.
+   - Then run `task5_overall_results` to combine the road-case results, calculate the overall scores, and generate the final comparison plot.
+7. Run `task6` for the robustness test.
 
 ## Required MATLAB Products
 
