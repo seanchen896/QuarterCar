@@ -95,9 +95,7 @@ set_param(char(modelName), ...
     try
         simOut = sim(char(modelName));
 
-        % scoreSuspension expects simout.logsout.get(name). The model
-        % returns root Outports in yout instead of logsout, so wrap it
-        % under the field name scoreSuspension actually looks for.
+        % Calculate suspension metrics from the simulation output
         metrics = scoreSuspension(simOut, roadName);
 
         comfortPass = metrics.rmsAccel <= requirements.RMSAcceleration && ...
