@@ -2,9 +2,9 @@ clear;
 clc;
 
 % Load the three road-case result tables
-speedBump = readtable("task5_speed_bump_retest.csv");
-pothole   = readtable("task5_pothole_retest.csv");
-roughRoad = readtable("task5_rough_road_retest.csv");
+speedBump = readtable("task5_speed_bump_normalized_results.csv");
+pothole   = readtable("task5_pothole_normalized_results.csv");
+roughRoad = readtable("task5_rough_road_normalized_results.csv");
 
 % Start with the common Ks and Cs values
 overallResults = table( ...
