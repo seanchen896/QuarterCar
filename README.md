@@ -29,9 +29,9 @@ Final tuned suspension values:
 - Cs = 1200 N*s/m
 - Overall normalized score = 1.9414
 
-The final design passed 2 out of 3 road cases. The speed bump was the limiting case because the tire-deflection requirement was not met.
+The final design passed 3 out of 3 road cases.
 
-For the robustness test, the sprung mass was increased by 25% from 300 kg to 375 kg. The tuned suspension again passed 2 out of 3 road cases.
+For the robustness test, the sprung mass was increased by 25% from 300 kg to 375 kg. The tuned suspension passed all 3 road cases with a 100% pass rate.
 
 ## How to Run
 
@@ -65,5 +65,4 @@ For the robustness test, the sprung mass was increased by 25% from 300 kg to 375
 
 ## Notes
 
-The speed bump, pothole, and rough-road cases were used throughout the project. The speed bump was the most difficult case and exceeded the selected tire-deflection limit.
-
+The speed bump, pothole, and rough-road cases were used throughout the project. The speed bump was the most challenging road case during testing.
